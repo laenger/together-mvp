@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'groovyx.grooid.groovy-android'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId 'biz.laenger.android.together.example'
+        minSdkVersion 19
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName '1.0.0'
+
+        testHandleProfiling true
+        testFunctionalTest true
+    }
+
+    buildTypes {
+        release {
+        }
+        debug {
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile "com.android.support:design:${supportVersion}"
+    compile project(path: ':together', configuration: 'debug')
+
+    compile "com.google.dagger:dagger:${daggerVersion}"
+    apt "com.google.dagger:dagger-compiler:${daggerVersion}"
+
+    compile "com.jakewharton:butterknife:${butterknifeVersion}"
+    apt "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
+
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.5'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'junit:junit:4.12'
+    testCompile 'cglib:cglib-nodep:3.2.4'
+}
