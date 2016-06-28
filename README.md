@@ -4,7 +4,7 @@ Loader-based Android MVP framework supporting Dagger 2 custom scopes, based on [
 
 ## Example
 
-This repository features an example app that demonstrates a simple Dagger 2, custom scope, fragment viewpager MVP setup.
+This repository features an example app that demonstrates a simple Dagger 2, custom scope, fragment viewpager MVP setup:
 
 ![Example App](assets/viewpager.gif)
 

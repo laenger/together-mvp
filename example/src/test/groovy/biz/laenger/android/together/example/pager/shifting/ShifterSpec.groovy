@@ -10,7 +10,7 @@ class ShifterSpec extends Specification {
         shifter = new Shifter("foo.bar")
     }
 
-    def "should initially be zero"() {
+    def "should have correct initial value"() {
         expect:
         shifter.current == "foo.bar"
     }

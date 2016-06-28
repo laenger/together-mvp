@@ -43,7 +43,7 @@ public class ShiftingFragment extends BasePagerFragment<ShiftingView, ShiftingPr
 
     @Override
     protected ShiftingComponent createComponent() {
-        return getAppComponent(this).shiftingComponent(new ShiftingModule("tomorrow."));
+        return getAppComponent(this).shiftingComponent(new ShiftingModule("together."));
     }
 
     @Override
