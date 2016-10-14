@@ -186,7 +186,7 @@ Add the maven repo URL to your `build.gradle`:
 
 ```groovy
 repositories {
-    maven { url "https://raw.github.com/laenger/maven-releases/master/snapshots" }
+    maven { url "https://raw.github.com/laenger/maven-releases/master/releases" }
 }
 ```
 
@@ -194,7 +194,7 @@ Add the library to the dependencies:
 
 ```groovy
 dependencies {
-    compile "biz.laenger.android:together:0.0.1-SNAPSHOT"
+    compile "biz.laenger.android:together:1.0.0"
 }
 ```
 
