@@ -1,11 +1,13 @@
+import groovyx.GroovyAndroidPlugin
+
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.2.1'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-        classpath 'org.codehaus.groovy:gradle-groovy-android-plugin:0.3.10'
+        classpath 'org.codehaus.groovy:groovy-android-gradle-plugin:1.1.0'
     }
 }
 
@@ -16,14 +18,15 @@ ext {
     nexusUsername = getEnvOrProperty('NEXUS_USERNAME')
     nexusPassword = getEnvOrProperty('NEXUS_PASSWORD')
 
-    compileSdkVersion = 23
-    buildToolsVersion = '23.0.3'
-    targetSdkVersion = 23
+    compileSdkVersion = 24
+    buildToolsVersion = '24.0.3'
+    targetSdkVersion = 24
 
-    supportVersion = '24.0.0'
-    daggerVersion = '2.4'
+    supportVersion = '24.2.1'
+    daggerVersion = '2.6.1'
     retrofitVersion = '2.1.0'
-    butterknifeVersion = '8.0.1'
+    butterknifeVersion = '8.4.0'
+    leakcanaryVersion = '1.5'
 }
 
 allprojects {
@@ -31,6 +34,15 @@ allprojects {
         jcenter()
         maven { url "https://raw.github.com/laenger/maven-releases/master/releases" }
         maven { url "https://raw.github.com/laenger/maven-releases/master/snapshots" }
+    }
+
+    plugins.withType(GroovyAndroidPlugin) {
+        dependencies {
+            testCompile 'org.codehaus.groovy:groovy:2.4.7:grooid'
+            testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+            testCompile 'cglib:cglib-nodep:3.2.4'
+            testCompile 'org.objenesis:objenesis:2.4'
+        }
     }
 }
 

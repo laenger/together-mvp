@@ -10,7 +10,7 @@ public class CountingPresenter extends BasePresenter<CountingView, CountingCompo
     @Inject Counter counter;
 
     @Inject
-    public CountingPresenter() {
+    CountingPresenter() {
         // ;
     }
 
@@ -20,7 +20,7 @@ public class CountingPresenter extends BasePresenter<CountingView, CountingCompo
         view.showText(String.valueOf(counter.getCurrent()));
     }
 
-    public void onCountClick() {
+    void onCountClick() {
         getView().showText(String.valueOf(counter.countUp()));
     }
 

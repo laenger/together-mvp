@@ -11,7 +11,7 @@ import biz.laenger.android.together.example.pager.BasePagerFragment;
 import biz.laenger.android.together.example.pager.counting.CountingFragment;
 import biz.laenger.android.together.example.pager.shifting.ShiftingFragment;
 
-public class MainPagerAdapter extends FragmentPagerAdapter {
+class MainPagerAdapter extends FragmentPagerAdapter {
 
     private enum TabItem {
         COUNTING1(CountingFragment.class, R.string.tab_counting_1),
@@ -31,7 +31,7 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
     private final TabItem[] tabItems = TabItem.values();
     private final Context context;
 
-    public MainPagerAdapter(FragmentManager fragmentManager, Context context) {
+    MainPagerAdapter(FragmentManager fragmentManager, Context context) {
         super(fragmentManager);
         this.context = context;
     }

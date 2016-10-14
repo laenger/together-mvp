@@ -1,5 +1,5 @@
 package biz.laenger.android.together.example.pager.counting;
 
-public interface CountingView {
+interface CountingView {
     void showText(String text);
 }

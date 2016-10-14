@@ -1,5 +1,7 @@
 package biz.laenger.android.together.example.di;
 
+import com.squareup.leakcanary.RefWatcher;
+
 import javax.inject.Singleton;
 
 import biz.laenger.android.together.example.main.MainComponent;
@@ -18,5 +20,7 @@ public interface AppComponent {
     CountingComponent countingComponent();
 
     ShiftingComponent shiftingComponent(ShiftingModule shiftingModule);
+
+    RefWatcher refWatcher();
 
 }

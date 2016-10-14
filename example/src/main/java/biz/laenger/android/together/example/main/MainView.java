@@ -1,5 +1,5 @@
 package biz.laenger.android.together.example.main;
 
-public interface MainView {
+interface MainView {
     void showPagerItem(int position);
 }

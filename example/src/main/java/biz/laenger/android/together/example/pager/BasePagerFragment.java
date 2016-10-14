@@ -5,6 +5,7 @@ import android.support.v4.app.LoaderManager;
 import biz.laenger.android.together.BaseComponent;
 import biz.laenger.android.together.BasePresenter;
 import biz.laenger.android.together.BasePresenterFragment;
+import biz.laenger.android.together.example.di.InjectionHelper;
 
 public abstract class BasePagerFragment<V, P extends BasePresenter<V, C>, C extends BaseComponent<? extends V, P>> extends BasePresenterFragment<V, P, C> {
 
@@ -16,6 +17,12 @@ public abstract class BasePagerFragment<V, P extends BasePresenter<V, C>, C exte
     @Override
     protected int getLoaderId() {
         return getTag().hashCode(); // unique within viewpager
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        InjectionHelper.getAppComponent(this).refWatcher().watch(this);
     }
 
 }

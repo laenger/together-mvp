@@ -10,7 +10,7 @@ public class ShiftingPresenter extends BasePresenter<ShiftingView, ShiftingCompo
     @Inject Shifter shifter;
 
     @Inject
-    public ShiftingPresenter() {
+    ShiftingPresenter() {
         // ;
     }
 
@@ -20,7 +20,7 @@ public class ShiftingPresenter extends BasePresenter<ShiftingView, ShiftingCompo
         view.showText(shifter.getCurrent());
     }
 
-    public void onShiftClick() {
+    void onShiftClick() {
         getView().showText(shifter.shift());
     }
 

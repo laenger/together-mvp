@@ -13,7 +13,7 @@ public class MainPresenter extends BasePresenter<MainView, MainComponent> {
     private int lastPagerItemPosition = 0;
 
     @Inject
-    public MainPresenter() {
+    MainPresenter() {
         // ;
     }
 
@@ -23,7 +23,7 @@ public class MainPresenter extends BasePresenter<MainView, MainComponent> {
         view.showPagerItem(lastPagerItemPosition);
     }
 
-    public void onPagerItemSelected(int position) {
+    void onPagerItemSelected(int position) {
         lastPagerItemPosition = position;
     }
 
