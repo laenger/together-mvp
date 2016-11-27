@@ -187,6 +187,7 @@ Add the maven repo URL to your `build.gradle`:
 ```groovy
 repositories {
     maven { url "https://raw.github.com/laenger/maven-releases/master/releases" }
+    maven { url "https://raw.github.com/laenger/maven-releases/master/snapshots" }
 }
 ```
 
