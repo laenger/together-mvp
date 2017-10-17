@@ -195,7 +195,7 @@ Add the library to the dependencies:
 
 ```groovy
 dependencies {
-    compile "biz.laenger.android:together:1.0.0"
+    compile "biz.laenger.android:together:1.0.1"
 }
 ```
 
