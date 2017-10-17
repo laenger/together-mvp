@@ -41,7 +41,7 @@ public abstract class BasePresenterFragment<V, P extends BasePresenter<V, C>, C 
     @Override
     @Deprecated
     public void onSaveInstanceState(Bundle outState) {
-        // ;
+        super.onSaveInstanceState(outState);
     }
 
     protected void inject(C component) {
