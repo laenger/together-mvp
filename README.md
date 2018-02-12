@@ -1,5 +1,9 @@
 # together
 
+**12/02/18 Deprecated: Use Android's [ViewModels](https://developer.android.com/reference/android/arch/lifecycle/ViewModel.html) (Architecture Components) instead.**
+
+## Overview
+
 Loader-based Android MVP framework supporting Dagger 2 custom scopes, based on [Tomorrow MVP][tmvp] with some inspiration from [Compartment][cmprtmnt].
 
 ## What else? Custom scopes!
